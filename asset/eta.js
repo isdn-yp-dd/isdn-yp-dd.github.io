@@ -6,7 +6,15 @@ function updateETA() {
     .then(response => response.json())
     .then(data => {
       for (let i = 0; i < 3; i++) {
-        eta[i].innerText = data['data']['eta'] [i]['diff'];
+        let oldETA = eta[i].innerText;
+        let newETA = data['data']['eta'][i];
+        if (newETA == undefined) {  // so cursed
+          eta[i].innerText = '---';
+          ppl[i].innerText = '0';
+        }
+        else if (oldETA != newETA['diff']) {
+          eta[i].innerText = newETA['diff'];
+        }
       }
     });
 }

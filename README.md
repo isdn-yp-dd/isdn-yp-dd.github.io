@@ -1,2 +1,2 @@
-# isdn-yp-dd.github.io
+# dd.github.io
 Website for Speedd

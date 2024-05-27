@@ -44,4 +44,5 @@ function updateETA() {
 }
 
 updateETA();
+ppl.forEach(p => p.innerText = getRandomInt(5, 8));  // init
 setInterval(updateETA, 20000);

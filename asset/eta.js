@@ -72,6 +72,7 @@ function updateETA() {
 }
 
 // main
+document.body.style.cursor = 'none';
 updateETA();
 ppl.forEach(p => p.innerText = getRandomInt(5, 8));  // init
 setInterval(updateETA, 20000);

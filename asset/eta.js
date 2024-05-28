@@ -32,7 +32,6 @@ function showBus(i) {
   }
 }
 
-
 function updateETA() {
   fetch('https://data.etagmb.gov.hk/eta/route-stop/2004791/1/7')
     .then(response => response.json())
